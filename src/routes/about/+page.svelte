@@ -1,4 +1,9 @@
-<h1>About</h1>
+<script>
+  import Illustration from '$lib/assets/img/illustration.svg';
+</script>
+<img class="h-40 mb-7" src={Illustration} alt="Feedback Sense Check Illustration" />
+
+<h1 class="text-7xl mb-8">About</h1>
 
 <p class="text-lg mb-8">“Withholding feedback is choosing comfort over growth. 
   Staying silent deprives people of the opportunity to learn. 

@@ -1,4 +1,9 @@
-<script>import GiveFeedback from "../../lib/components/body-elements/GiveFeedback.svelte"</script>
+<script>
+    import GiveFeedback from "../../lib/components/body-elements/GiveFeedback.svelte"
+    import Illustration from '$lib/assets/img/illustration.svg';
+</script>
+<img class="h-40 mb-7" src={Illustration} alt="Feedback Sense Check Illustration" />
+
 <h2 class="text-6xl mb-8">Pause and check your intentions</h2>
 <p class="text-2xl mb-8">When giving feedback, it's important to be well-intentioned.  Before you feed back, pause and check your intentions.</p>
 <h3 class="text-3xl mb-8">Feedback should be caring</h3>
