@@ -3,7 +3,7 @@
     import ClearSpecificCandid from "../../lib/components/body-elements/ClearSpecificCandid.svelte"
 </script>
 
-<h2>It seems like a good moment to give feedback</h2>
-<p>Looks like conditions may work in your favour. Follow the advice below to create the best chance of having a feedback conversation that leads to growth for both of you.</p>
+<h2 class="text-6xl mb-8">It seems like a good moment to give feedback</h2>
+<p class="text-2xl mb-8">Looks like conditions may work in your favour. Follow the advice below to create the best chance of having a feedback conversation that leads to growth for both of you.</p>
 <PersonalisedRecommendations/>
 <ClearSpecificCandid/>
