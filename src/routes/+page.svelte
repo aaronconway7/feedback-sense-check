@@ -1,60 +1,68 @@
 <script>
-  import Button from "../lib/components/Button.svelte";
-	import Question from "../lib/components/Question.svelte";
-  import sourceQuestions from "../lib/questions.json";
-  import Illustration from '$lib/assets/img/illustration.svg';
-  import { answers } from '../stores';
-  import { fly } from "svelte/transition";
+	import Button from '../lib/components/Button.svelte';
+	import Question from '../lib/components/Question.svelte';
+	import sourceQuestions from '../lib/questions.json';
+	import Illustration from '$lib/assets/img/illustration.svg';
+	import { answers } from '../stores';
+	import { fly } from 'svelte/transition';
+	import { goto } from '$app/navigation';
 
-  let questions = [];
+	let questions = [];
 
-  let answersValue;
+	let answersValue;
 
-  let reachedEnd=false;
+	let reachedEnd = false;
 
-  answers.subscribe(value => {
-    answersValue = value;
-  })
+	answers.subscribe((value) => {
+		answersValue = value;
+	});
 
-  function findQuestion(byId) {
-    return sourceQuestions.find(q => q.id === byId);
-  }
+	function findQuestion(byId) {
+		return sourceQuestions.find((q) => q.id === byId);
+	}
 
-  function handleAnswer(option, question) {
-    const answer = option.detail;
-    const currentOption = {
-      questionId: question.id,
-      optionId: option.detail.id,
-    }
-    answers.update(v => [...v, currentOption]);
-    if (checkForOutput(answer)) {
-      reachedEnd = true;
-    }
-    appendQuestion(answer.goTo);
-  }
+	function handleAnswer(option, question) {
+		const answer = option.detail;
+		const currentOption = {
+			questionId: question.id,
+			optionId: option.detail.id
+		};
+		answers.update((v) => [...v, currentOption]);
+		if (checkForOutput(answer)) {
+			reachedEnd = true;
+		}
+		appendQuestion(answer.goTo);
+	}
 
-  function checkForOutput(answer) {
-    return answer.goTo.startsWith("/");
-  }
+	function checkForOutput(answer) {
+		return answer.goTo.startsWith('/');
+	}
 
-  function appendQuestion(questionId) {
-    let nextQuestion = findQuestion(questionId);
-    if (!nextQuestion) {
-      return;
-    }
-    questions = [...questions, nextQuestion];
-  }
+	function appendQuestion(questionId) {
+		let nextQuestion = findQuestion(questionId);
+		if (!nextQuestion) {
+			return;
+		}
+		questions = [...questions, nextQuestion];
+	}
 
-  function restart() {
-    questions = [];
-    answers.set([]);
-    reachedEnd = false;
-  }
+	function restart() {
+		questions = [];
+		answers.set([]);
+		reachedEnd = false;
+	}
 
-  function start() {
-    restart()
-    questions = [...questions, sourceQuestions[0]];
-  }
+	function start() {
+		restart();
+		questions = [...questions, sourceQuestions[0]];
+	}
+
+	function showResult() {
+		const latestAnswer = $answers.at(-1);
+		const question = findQuestion(latestAnswer.questionId);
+		const option = question.options.find((o) => o.id === latestAnswer.optionId);
+		goto(option.goTo);
+	}
 </script>
 
 <img class="h-40 mb-7" src={Illustration} alt="Feedback Sense Check Illustration" />
@@ -66,20 +74,25 @@
 		your emotions.
 	</p>
 </div>
-<Button showArrow="{true}" arrowDirection="down" label="Let's Go" on:click={start}/>
-<hr class="my-8 mt-8" />
-{JSON.stringify(answersValue)}
+<Button showArrow={true} arrowDirection="down" label="Let's Go" on:click={start} />
+<hr class="mb-28 mt-32 border-4" />
 <div class="grid gap-12">
-  {#each questions as question}
-    <div transition:fly="{{ y: 100, duration: 500}}">
-      <Question question="{question}" on:clickOption={(option) => handleAnswer(option, question)} />
-    </div>
-  {/each}
+	{#each questions as question}
+		<div transition:fly={{ y: 100, duration: 500 }}>
+			<Question {question} on:clickOption={(option) => handleAnswer(option, question)} />
+		</div>
+	{/each}
 </div>
 
 {#if reachedEnd}
-<div class="grid gap-7 mt-32">
-<Button label="Continue" showArrow="{true}" />
-<Button variant="outlined" label="Start again" arrowDirection="up" showArrow="{true}" on:click={restart}/>
-</div>
+	<div class="grid gap-7 mt-32">
+		<Button label="Continue" showArrow={true} on:click={showResult} />
+		<Button
+			variant="outlined"
+			label="Start again"
+			arrowDirection="up"
+			showArrow={true}
+			on:click={restart}
+		/>
+	</div>
 {/if}

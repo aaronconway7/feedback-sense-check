@@ -56,9 +56,9 @@
         "id": "7",
         "question": "How are you feeling?",
         "options": [
-            { "id": "a", "text": "Calm and clear-headed", "goTo": "#timeCheck"},
-            { "id": "b", "text": "Not on top form", "goTo": "#timeCheck"},
-            { "id": "c", "text": "Defensive, stressed or tired", "goTo": "#timeCheck"}
+            { "id": "a", "text": "Calm and clear-headed", "goTo": "/time-check"},
+            { "id": "b", "text": "Not on top form", "goTo": "/time-check"},
+            { "id": "c", "text": "Defensive, stressed or tired", "goTo": "/time-check"}
         ]
     }
 ]

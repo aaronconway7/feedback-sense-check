@@ -7,7 +7,7 @@
 		<slot />
 	</main>
 	<footer class="py-11 px-6 flex items-center gap-3 shrink-0 border-t border-t-grey text-xl">
-		<p class="font-bold">Feedback <span class="font-serif">Sense Check</span></p>
+		<a href="/"><p class="font-bold">Feedback <span class="font-serif">Sense Check</span></p></a>
 		<div class="rounded-full bg-grey/50 w-1 h-1" />
 		<a href="/about" class="transition hover:opacity-80">About</a>
 	</footer>
