@@ -11,7 +11,7 @@
 <p>But when we receive feedback, a flood of neurochemicals activated in the amygdala (where emotions are predominantly processed) </p>
   limits our abilities to activate other parts of the brain typically used for higher/executive function – reducing our ability to process / think logically. 
 <p>As a result, we can make irrational choices, give feedback poorly, and break the feedback loop.</p>
-  Feedback Sense Check is a questionnaire-style web flow to help you manage your emotions before giving – or after receiving – feedback. </p>
+<p>Feedback Sense Check is a questionnaire-style web flow to help you manage your emotions before giving – or after receiving – feedback. </p>
 <p>It’s for anyone working in an organisation to build empathy, maintain a healthy feedback loop and help people develop.</p>
 
 <h3>Biases and perspectives in feedback</h3>
