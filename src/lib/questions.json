@@ -21,7 +21,7 @@
         "options": [
             { "id": "a", "text": "Something they said or did", "goTo": "4"},
             { "id": "c", "text": "They do things in a different way to me", "goTo": "pause"},
-            { "id": "d", "text": "Nothing in particular", "goTo": "pause"}
+            { "id": "d", "text": "I'm not quite sure", "goTo": "pause"}
         ]
     },    
     {
