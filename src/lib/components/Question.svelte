@@ -6,6 +6,6 @@
 
 <h2>{question}</h2>
 {#each options as option}
-  <Button label="{option.label}" variant="inactive" />
+  <Button label="{option.text}" variant="inactive" />
 {/each}
 
