@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url('lib/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url('lib/assets/fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Bold.otf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Meriweather';
+	src: url('lib/assets/fonts/merriweather-v30-latin/merriweather-v30-latin-300italic.ttf');
+	font-weight: 300;
+}
