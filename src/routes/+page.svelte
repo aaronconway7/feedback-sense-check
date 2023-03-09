@@ -3,16 +3,27 @@
 	import Question from "../lib/components/Question.svelte";
   import sourceQuestions from "../lib/questions.json";
   import Illustration from '$lib/assets/img/illustration.svg';
+  import { answers } from '../stores';
 
   let questions = [];
+
+  let answersValue;
+
+  answers.subscribe(value => {
+    answersValue = value;
+  })
 
   function findQuestion(byId) {
     return sourceQuestions.find(q => q.id === byId);
   }
 
-  function handleAnswer(e) {
-    console.log(e.detail);
-    const answer = e.detail;
+  function handleAnswer(option, question) {
+    const answer = option.detail;
+    const currentOption = {
+      questionId: question.id,
+      optionId: option.detail.id,
+    }
+    answers.update(v => [...v, currentOption]);
     appendQuestion(answer.goTo);
   }
 
@@ -38,6 +49,7 @@
 </div>
 <Button variant="active" label="Let's Go" on:click={start}/>
 <hr class="my-8 mt-8" />
+{JSON.stringify(answersValue)}
 {#each questions as question}
-<Question question="{question.question}" options="{question.options}" on:clickOption={handleAnswer} />
+<Question question="{question}" on:clickOption={(option) => handleAnswer(option, question)} />
 {/each}
