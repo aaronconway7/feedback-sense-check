@@ -1,66 +1,162 @@
-[
-    {
-        "id": "1",
-        "question": "What's the situation?",
-        "options": [
-            { "id": "a", "text": "I'd like to give feedback", "goTo": "2"},
-            { "id": "b", "text": "I've recieved feedback", "goTo": "received-feedback"}
-        ]
-    },
-    {
-        "id": "2",
-        "question": "What type of feedback?",
-        "options": [
-            { "id": "a", "text": "Constructive", "goTo": "3"},
-            { "id": "b", "text": "Positive", "goTo": "/go-for-it"}
-        ]
-    },
-    {
-        "id": "3",
-        "question": "What's it about?",
-        "options": [
-            { "id": "a", "text": "Something they said that impacted others", "goTo": "4"},
-            { "id": "b", "text": "Something they did that impacted others", "goTo": "4"},
-            { "id": "c", "text": "They did things in a different way to me", "goTo": "pause"},
-            { "id": "d", "text": "Nothing in particular", "goTo": "pause"}
-        ]
-    },    
-    {
-        "id": "4",
-        "question": "What's your main intention?",
-        "options": [
-            { "id": "a", "text": "Help them improve", "goTo": "5"},
-            { "id": "b", "text": "Help them do something differently", "goTo": "5"},
-            { "id": "c", "text": "Get better outcomes for the team", "goTo": "5"},
-            { "id": "d", "text": "Share how you do things", "goTo": "pause"},
-            { "id": "e", "text": "Share how an incident made you feel", "goTo": "pause"}
-        ]
-    }, 
-    {
-        "id": "5",
-        "question": "What's your relationship?",
-        "options": [
-            { "id": "a", "text": "I'm their manager / more senior", "goTo": "6"},
-            { "id": "b", "text": "They're my manager / more senior", "goTo": "6"},
-            { "id": "c", "text": "We're peers", "goTo": "6"}
-        ]
-    },   
-    {
-        "id": "6",
-        "question": "How well do you know them?",
-        "options": [
-            { "id": "a", "text": "We have a caring, trusting relationship", "goTo": "7"},
-            { "id": "b", "text": "I know them fairly well", "goTo": "7"},
-            { "id": "c", "text": "I don’t know them well", "goTo": "7"}
-        ]
-    },   
-    {
-        "id": "7",
-        "question": "How are you feeling?",
-        "options": [
-            { "id": "a", "text": "Calm and clear-headed", "goTo": "timeCheck"},
-            { "id": "b", "text": "Not on top form", "goTo": "timeCheck"},
-            { "id": "c", "text": "Defensive, stressed or tired", "goTo": "timeCheck"}
-        ]
-    }
-]
+{ 
+    "questions": [
+        {
+            "id": "1",
+            "question": "What's the situation?",
+            "options": [
+                { "id": "a", "text": "I'd like to give feedback", "goTo": "2"},
+                { "id": "b", "text": "I've recieved feedback", "goTo": "received-feedback"}
+            ]
+        },
+        {
+            "id": "2",
+            "question": "What type of feedback?",
+            "options": [
+                { "id": "a", "text": "Constructive", "goTo": "3"},
+                { "id": "b", "text": "Positive", "goTo": "/go-for-it"}
+            ]
+        },
+        {
+            "id": "3",
+            "question": "What's it about?",
+            "options": [
+                { "id": "a", "text": "Something they said or did", "goTo": "4"},
+                { "id": "c", "text": "They do things in a different way to me", "goTo": "pause"},
+                { "id": "d", "text": "Nothing in particular", "goTo": "pause"}
+            ]
+        },    
+        {
+            "id": "4",
+            "question": "What's your main intention?",
+            "options": [
+                { "id": "a", "text": "Help them improve", "goTo": "5"},
+                { "id": "b", "text": "Help them do something differently", "goTo": "5"},
+                { "id": "d", "text": "Share how you do things", "goTo": "pause"},
+                { "id": "e", "text": "Share how an incident made you feel", "goTo": "pause"}
+            ]
+        }, 
+        {
+            "id": "5",
+            "question": "What's your relationship?",
+            "options": [
+                { "id": "a", "text": "I'm their manager / more senior", "goTo": "6"},
+                { "id": "b", "text": "They're my manager / more senior", "goTo": "6"},
+                { "id": "c", "text": "We're peers", "goTo": "6"}
+            ]
+        },   
+        {
+            "id": "6",
+            "question": "How well do you know them?",
+            "options": [
+                { "id": "a", "text": "We have a caring, trusting relationship", "goTo": "7"},
+                { "id": "b", "text": "I know them fairly well", "goTo": "7"},
+                { "id": "c", "text": "I don't know them well", "goTo": "7"}
+            ]
+        },   
+        {
+            "id": "7",
+            "question": "How are you feeling?",
+            "options": [
+                { "id": "a", "text": "Calm and clear-headed", "goTo": "timeCheck"},
+                { "id": "b", "text": "Not on top form", "goTo": "timeCheck"},
+                { "id": "c", "text": "Defensive, stressed or tired", "goTo": "timeCheck"}
+            ]
+        }
+    ],
+    "outputs": [
+        {   "codes": ["5a"],
+            "header": "As you're more senior, bear in mind your feedback has added credibility",
+            "body": [
+                {
+                    "type": "paragraph",
+                    "content": "As you're hierarchically senior, remember that your feedback is going to have added credibility. It may be viewed as ‘the opinion of the company', or coming from someone they look up to, from a career perspective. The individual may therefore be feeling as though your perspective affects the company's view of them (and possibly their performance). This may be the case, especially if you're the manager, so it's important to remind them that this is one observation in amongst many others and that your intention is curiosity and development."
+                }
+            ]
+        },        
+        {   "codes": ["5b"],
+            "header": "It can be hard to give upward feedback, but development leads to better outcomes for all",
+            "body": [
+                {
+                    "type": "paragraph",
+                    "content": "It can be difficult to give upward feedback, especially if you're worried about how it may affect the company's view of you (even more so if this person is responsible for evaluating your performance - you may feel as though ‘relationship trumps feedback'). Resist these urges - remind yourself and them that development leads to better outcomes for all of us - and that you hope you can both learn from having what seems to be an uncomfortable conversation. You may even feel more likely to give feedback if you frame it as ‘an opportunity to explore the way they approached something"
+                }
+            ]
+        },
+        {   "codes": ["5c"],
+            "header": "Feeding back to peers can be hard, but development leads to better outcomes for all",
+            "body": [
+                {
+                    "type": "paragraph",
+                    "content": "As you're a peer, and especially if you're working in a team together, you may be thinking that relationship building trumps feedback - and that giving feedback will create barriers that make life more difficult. Resist these urges - remind yourself and them that development leads to better outcomes for all of us - and that you hope you can both learn from having what seems to be an uncomfortable conversation"
+                }
+            ]
+        },        
+        {   "codes": ["6a"],
+            "header": "It's easier because you have a good relationship, but still lead with curiosity",
+            "body": [
+                {
+                    "type": "paragraph",
+                    "content": "As you already have a caring, trusting relationship, chances are you may have already shared feedback with one another. That makes it so much easier to give feedback, and more chance it will land well (or be forgiven if it doesn't). However, we can sometimes avoid giving feedback if we want people to like us. Resist these urges - remind yourself and them that development leads to better outcomes for all of us - and that you hope you can both learn from having what seems to be an uncomfortable conversation."
+                }
+            ]
+        },        
+        {   "codes": ["6b", "6c"],
+            "header": "As you haven't yet built a caring, trusting relationship, maximise your curiosity",
+            "body": [
+                {
+                    "type": "paragraph",
+                    "content": "You could start by asking if now's a good time for feedback, and how they prefer to receive it."
+                },                
+                {
+                    "type": "paragraph",
+                    "content": "Perhaps they have a ‘user manual' – something which says how they like to receive feedback, and other insights about them."
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Before giving direct feedback, consider leading with a question. For example, if you have feedback about how they facilitated a workshop, consider asking – ‘How do you feel the workshop went?'. Perhaps you'll uncover something in their response which helps you give more helpful feedback."
+                },                
+                {
+                    "type": "paragraph",
+                    "content": "If you're not familiar with someone, giving feedback can often be easier - but if you're new to a team, or they're new to your team, you may avoid feedback on the basis that you need to ‘make a good impression' and build relationships. Resist these urges - remind yourself and them that development leads to better outcomes for all of us - and that you hope you can both learn from having what seems to be an uncomfortable conversation."
+                },
+            ]
+        },        
+        {   "codes": ["7a"],
+            "header": "You seem to be in a good place",
+            "body": [
+                {
+                    "type": "paragraph",
+                    "content": "You're feeling calm and clear-headed. Good conditions for giving helpful, caring feedback. If you begin to feel emotional, try taking some deep breaths."
+                }
+            ]
+        },      
+        {   "codes": ["7b", "7c"],
+            "header": "Pause before giving feedback",
+            "body": [
+                {
+                    "type": "paragraph",
+                    "content": "As you're not feeling on top form, you may be more liable to your emotions distracting you from what needs to be said. Take a deep breath and ask yourself if you're ready to be fully present and committed to an open and honest dialogue."
+                }
+            ]
+        },  
+        {   "codes": ["early", "weekday"],
+            "header": "The timing seems right",
+            "body": [
+                {
+                    "type": "paragraph",
+                    "content": "Right now it's ##time## on a ##day##. Assuming your colleague works standard weekday hours, now could be a good time to give feedback. If they work different hours, consider – is this a good time to feed back, or is it late in their working day / a non-working day? If so, they might not be in a great headspace to receive feedback."
+                }
+            ]
+        },    
+        {   "codes": ["late", "weekend"],
+            "header": "The timing may not be great",
+            "body": [
+                {
+                    "type": "paragraph",
+                    "content": "Right now it's ##time## on a ##weekday##. Assuming your colleague works standard weekday hours, now may not be a good time to give feedback. It's late, and they may not be in a great headspace to receive feedback. Consider sleeping on it and feeding back tomorrow."
+                }
+            ]
+        }
+            
+    ]
+}
