@@ -4,6 +4,7 @@
   import sourceQuestions from "../lib/questions.json";
   import Illustration from '$lib/assets/img/illustration.svg';
   import { answers } from '../stores';
+  import { fly } from "svelte/transition";
 
   let questions = [];
 
@@ -47,9 +48,13 @@
 		your emotions.
 	</p>
 </div>
-<Button variant="active" label="Let's Go" on:click={start}/>
+<Button variant="active" showArrow="{true}" label="Let's Go" on:click={start}/>
 <hr class="my-8 mt-8" />
 {JSON.stringify(answersValue)}
-{#each questions as question}
-<Question question="{question}" on:clickOption={(option) => handleAnswer(option, question)} />
-{/each}
+<div class="grid gap-12">
+  {#each questions as question}
+    <div transition:fly="{{ y: 100, duration: 500}}">
+      <Question question="{question}" on:clickOption={(option) => handleAnswer(option, question)} />
+    </div>
+  {/each}
+</div>
