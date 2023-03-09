@@ -10,6 +10,8 @@
 
   let answersValue;
 
+  let reachedEnd=false;
+
   answers.subscribe(value => {
     answersValue = value;
   })
@@ -25,16 +27,32 @@
       optionId: option.detail.id,
     }
     answers.update(v => [...v, currentOption]);
+    if (checkForOutput(answer)) {
+      reachedEnd = true;
+    }
     appendQuestion(answer.goTo);
+  }
+
+  function checkForOutput(answer) {
+    return answer.goTo.startsWith("/");
   }
 
   function appendQuestion(questionId) {
     let nextQuestion = findQuestion(questionId);
+    if (!nextQuestion) {
+      return;
+    }
     questions = [...questions, nextQuestion];
   }
 
-  function start() {
+  function restart() {
     questions = [];
+    answers.set([]);
+    reachedEnd = false;
+  }
+
+  function start() {
+    restart()
     questions = [...questions, sourceQuestions[0]];
   }
 </script>
@@ -48,7 +66,7 @@
 		your emotions.
 	</p>
 </div>
-<Button variant="active" showArrow="{true}" label="Let's Go" on:click={start}/>
+<Button showArrow="{true}" arrowDirection="down" label="Let's Go" on:click={start}/>
 <hr class="my-8 mt-8" />
 {JSON.stringify(answersValue)}
 <div class="grid gap-12">
@@ -58,3 +76,10 @@
     </div>
   {/each}
 </div>
+
+{#if reachedEnd}
+<div class="grid gap-7 mt-32">
+<Button label="Continue" showArrow="{true}" />
+<Button variant="outlined" label="Start again" arrowDirection="up" showArrow="{true}" on:click={restart}/>
+</div>
+{/if}
