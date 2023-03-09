@@ -1,7 +1,10 @@
 <script>
+  import Arrow from "./Arrow.svelte";
+
   export let label
   export let size = "large";
   export let variant = "default";
+  export let arrowDirection = "right";
 
   const variants = {
     "default" : 'border-orange bg-orange text-grey hover:bg-orange/80',
@@ -11,4 +14,4 @@
   }
 </script>
 
-<button on:click type="button" class="w-96 text-left border-4 border-solid transition { variants[variant] } { size=="large" ? 'px-5 py-3' : 'px-4 py-1'}">{label}</button>
+<button on:click type="button" class="flex justify-between w-96 text-left border-4 border-solid transition { variants[variant] } { size=="large" ? 'px-5 py-3' : 'px-4 py-1'}">{label} <Arrow direction={arrowDirection}  /></button>
