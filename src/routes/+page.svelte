@@ -60,8 +60,8 @@
 <img class="h-40 mb-7" src={Illustration} alt="Feedback Sense Check Illustration" />
 <h1 class="text-7xl font-sans mb-7">Feedback <span class="font-serif">Sense Check</span></h1>
 <div class="grid gap-4 mb-7 text-2xl font-medium">
-	<p>Feedback is a gift, but it can trigger emotions which cause us to make irrational choices.</p>
-	<p>
+	<p class="text-lg mb-8">Feedback is a gift, but it can trigger emotions which cause us to make irrational choices.</p>
+	<p class="text-lg mb-8">
 		Before giving or responding to feedback at work, use Feedback Sense Check to help you manage
 		your emotions.
 	</p>
