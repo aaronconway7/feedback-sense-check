@@ -5,7 +5,7 @@
 	import GiveTimelyFeedback from '../give-timely-feedback/+page.svelte';
 	import GoodMoment from '../good-moment/+page.svelte';
 
-	$: isEarly = getHours(new Date()) >= 2 && getHours(new Date()) < 18;
+	$: isEarly = getHours(new Date()) >= 2 && getHours(new Date()) < 19;
 	$: isEndOfWeek = isFriday(new Date()) || isWeekend(new Date());
 </script>
 

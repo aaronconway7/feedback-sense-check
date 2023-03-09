@@ -11,7 +11,7 @@
 	import GoodRelationship from './personalised-recommendations/good-relationship.svelte';
 	import MaximiseCuriosity from './personalised-recommendations/maximise-curiosity.svelte';
 
-	$: isEarly = getHours(new Date()) >= 2 && getHours(new Date()) < 18;
+	$: isEarly = getHours(new Date()) >= 2 && getHours(new Date()) < 19;
 	$: isEndOfWeek = isFriday(new Date()) || isWeekend(new Date());
 </script>
 
