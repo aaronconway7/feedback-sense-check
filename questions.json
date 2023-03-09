@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1",
+        "question": "What's the situation?",
+        "options": [
+            { "id": "a", "text": "I'd like to give feedback", "goTo": "2"},
+            { "id": "b", "text": "I've recieved feedback", "goTo": "received-feedback"}
+        ]
+    },
+    {
+        "id": "2",
+        "question": "What type of feedback?",
+        "options": [
+            { "id": "a", "text": "Constructive", "goTo": "3"},
+            { "id": "b", "text": "Positive", "goTo": "/go-for-it"}
+        ]
+    },
+    {
+        "id": "3",
+        "question": "What's it about?",
+        "options": [
+            { "id": "a", "text": "Something they said that impacted others", "goTo": "4"},
+            { "id": "b", "text": "Something they did that impacted others", "goTo": "4"},
+            { "id": "c", "text": "They did things in a different way to me", "goTo": "pause"},
+            { "id": "d", "text": "Nothing in particular", "goTo": "pause"}
+        ]
+    },    
+    {
+        "id": "4",
+        "question": "What's your main intention?",
+        "options": [
+            { "id": "a", "text": "Help them improve", "goTo": "5"},
+            { "id": "b", "text": "Help them do something differently", "goTo": "5"},
+            { "id": "c", "text": "Get better outcomes for the team", "goTo": "5"},
+            { "id": "d", "text": "Share how you do things", "goTo": "pause"},
+            { "id": "e", "text": "Share how an incident made you feel", "goTo": "pause"}
+        ]
+    }, 
+    {
+        "id": "5",
+        "question": "What's your relationship?",
+        "options": [
+            { "id": "a", "text": "I'm their manager / more senior", "goTo": "6"},
+            { "id": "b", "text": "They're my manager / more senior", "goTo": "6"},
+            { "id": "c", "text": "We're peers", "goTo": "6"}
+        ]
+    },   
+    {
+        "id": "6",
+        "question": "How well do you know them?",
+        "options": [
+            { "id": "a", "text": "We have a caring, trusting relationship", "goTo": "7"},
+            { "id": "b", "text": "I know them fairly well", "goTo": "7"},
+            { "id": "c", "text": "I don’t know them well", "goTo": "7"}
+        ]
+    },   
+    {
+        "id": "7",
+        "question": "How are you feeling?",
+        "options": [
+            { "id": "a", "text": "Calm and clear-headed", "goTo": "timeCheck"},
+            { "id": "b", "text": "Not on top form", "goTo": "timeCheck"},
+            { "id": "c", "text": "Defensive, stressed or tired", "goTo": "timeCheck"}
+        ]
+    }
+]
