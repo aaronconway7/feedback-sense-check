@@ -3,7 +3,7 @@
 </script>
 
 <div class="min-h-screen h-full flex flex-col bg-navy text-grey">
-	<main class="md:py-40 md:px-36">
+	<main class="md:py-40 md:px-96">
 		<slot />
 	</main>
 	<footer class="py-11 px-6 flex items-center gap-3 shrink-0 border-t border-t-grey text-xl">
