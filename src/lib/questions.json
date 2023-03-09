@@ -4,7 +4,7 @@
         "question": "What's the situation?",
         "options": [
             { "id": "a", "text": "I'd like to give feedback", "goTo": "2"},
-            { "id": "b", "text": "I've recieved feedback", "goTo": "received-feedback"}
+            { "id": "b", "text": "I've recieved feedback", "goTo": "/received-feedback"}
         ]
     },
     {
@@ -20,8 +20,8 @@
         "question": "What's it about?",
         "options": [
             { "id": "a", "text": "Something they said or did", "goTo": "4"},
-            { "id": "c", "text": "They do things in a different way to me", "goTo": "pause"},
-            { "id": "d", "text": "I'm not quite sure", "goTo": "pause"}
+            { "id": "c", "text": "They do things in a different way to me", "goTo": "/pause"},
+            { "id": "d", "text": "I'm not quite sure", "goTo": "/pause"}
         ]
     },    
     {
@@ -30,8 +30,8 @@
         "options": [
             { "id": "a", "text": "Help them improve", "goTo": "5"},
             { "id": "b", "text": "Help them do something differently", "goTo": "5"},
-            { "id": "d", "text": "Share how you do things", "goTo": "pause"},
-            { "id": "e", "text": "Share how an incident made you feel", "goTo": "pause"}
+            { "id": "d", "text": "Share how you do things", "goTo": "/pause"},
+            { "id": "e", "text": "Share how an incident made you feel", "goTo": "/pause"}
         ]
     }, 
     {
@@ -56,9 +56,9 @@
         "id": "7",
         "question": "How are you feeling?",
         "options": [
-            { "id": "a", "text": "Calm and clear-headed", "goTo": "timeCheck"},
-            { "id": "b", "text": "Not on top form", "goTo": "timeCheck"},
-            { "id": "c", "text": "Defensive, stressed or tired", "goTo": "timeCheck"}
+            { "id": "a", "text": "Calm and clear-headed", "goTo": "#timeCheck"},
+            { "id": "b", "text": "Not on top form", "goTo": "#timeCheck"},
+            { "id": "c", "text": "Defensive, stressed or tired", "goTo": "#timeCheck"}
         ]
     }
 ]

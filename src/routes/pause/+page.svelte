@@ -8,6 +8,6 @@
 <h3>Describe the situation, behaviour and impact</h3>
 <p>To check your intentions and keep feedback specific, try to describe the:</p>
 <GiveFeedback/>
-<p>This is called the SBI model. An alternative is COIN.</p>
+<p>This is called <a href="https://www.ccl.org/articles/leading-effectively-articles/closing-the-gap-between-intent-vs-impact-sbii/">the SBI model</a>. An alternative is <a href="https://www.mindtools.com/a94k5vp/the-coin-conversation-model">COIN</a>.</p>
 <h3>Don't make it personal</h3>
 <p>If you're not coming from a place of care, can't think of a situation, behaviour and impact, or your feedback is about their personality, pause. Consider carefully what you want to feed back about.</p>
