@@ -6,9 +6,10 @@
 	<main class="md:py-40 md:px-36">
 		<slot />
 	</main>
-	<footer class="bg-orange py-11 px-6 flex gap-3 shrink-0">
-		<p>Feedback <span>Sense Check</span></p>
-		<a href="/about">About</a>
+	<footer class="py-11 px-6 flex items-center gap-3 shrink-0 border-t border-t-grey text-xl">
+		<p class="font-bold">Feedback <span class="font-serif">Sense Check</span></p>
+		<div class="rounded-full bg-grey/50 w-1 h-1" />
+		<a href="/about" class="transition hover:opacity-80">About</a>
 	</footer>
 </div>
 
