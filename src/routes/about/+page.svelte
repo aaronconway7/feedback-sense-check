@@ -35,7 +35,7 @@ I came up with the idea for Feedback Sense Check in 2022 to avoid that kind of s
 <p class="text-lg mb-8">- Tom Hiskey, design manager</p>
 
 <h3 class="text-3xl mb-8">Built during Thriva Maker Day</h3>
-v1 of Feedback Sense Check was built in one day, 9 March 2023, by some of the amazing team at Thriva.
+<p class="text-lg mb-8">v1 of Feedback Sense Check was built in one day, 9 March 2023, by some of the amazing team at Thriva.</p>
 
 <h3 class="text-3xl mb-8">The team</h3>
 <p class="text-lg mb-8">Aaron Conway – engineering</p>
