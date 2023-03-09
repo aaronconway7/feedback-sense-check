@@ -1,3 +1,4 @@
+<script>import GiveFeedback from "../../lib/components/body-elements/GiveFeedback.svelte"</script>
 <h2>Fantastic, go for it!</h2>
 <p>Giving positive feedback is very important. To be as helpful as possible, be clear and specific.</p>
 <h3>Positive feedback is important</h3>
@@ -7,9 +8,7 @@
 </p>
 <h3>Describe the situation, behaviour and impact</h3>
 <p>To check your intentions and keep feedback specific, try to describe the:
-Situation (when and where)
-Behaviour (the thing they did or said), and
-Impact (how you or others may have felt)
+<GiveFeedback/>
 It could be as simple as ‘Very well structured presentation, with great use of visuals [behaviour] in the weekly wrap just now [situation], really exciting to see what you’re working on and the information was very easy to take in! [impact]’ 
 Be as specific as you can with the [behaviour] to help them really understand what they can do more of.
 This is called the SBI model. An alternative is COIN.  </p>
