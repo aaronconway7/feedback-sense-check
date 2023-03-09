@@ -9,10 +9,10 @@
 <h2 class="text-6xl mb-8">Bear these things in mind too</h2>
 <h3 class="text-3xl mb-8">Make it a dialogue</h3>
 <p class="text-lg mb-8">Stay caring and curious, and try to make feedback a dialogue. You could ask:</p>
-<ul>
-  <li>How do you feel about my feedback? or</li>
-  <li>What's your perspective? or</li>
-  <li>How can I help?</li>
+<ul class="mb-8 text-lg list-disc ml-4">
+  <li class="mb-2">How do you feel about my feedback? or</li>
+  <li class="mb-2">What's your perspective? or</li>
+  <li class="mb-2">How can I help?</li>
 </ul>
 <h3 class="text-3xl mb-8">Make it timely</h3>
 <p class="text-lg mb-8">It helps if the feedback is timely – soon after the situation, so it's fresh in their mind.</p>
