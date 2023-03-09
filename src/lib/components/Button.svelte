@@ -1,0 +1,14 @@
+<script>
+  export let label
+  export let size = "large";
+  export let variant = "default";
+
+  const variants = {
+    "default" : 'border-orange bg-orange text-grey hover:bg-orange/80',
+    "active": 'border-grey bg-orange text-grey hover:bg-orange/80',
+    "inactive": 'border-grey bg-grey text-navy hover:bg-grey/80',
+    "outlined": 'bg-navy border-orange text-orange hover:bg-navy-90',
+  }
+</script>
+
+<button on:click type="button" class="w-96 text-left border-4 border-solid transition { variants[variant] } { size=="large" ? 'px-5 py-3' : 'px-4 py-1'}">{label}</button>
