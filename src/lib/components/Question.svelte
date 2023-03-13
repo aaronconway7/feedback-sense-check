@@ -12,7 +12,7 @@
 </script>
 
 <h2 class="text-2xl font-bold mb-3">{question.question}</h2>
-<div class="grid buttonContainer gap-3">
+<div class="grid gap-3 md:grid-cols-[max-content_max-content]">
 	{#each question.options as option}
 		<Button
 			label={option.text}
@@ -23,9 +23,3 @@
 		/>
 	{/each}
 </div>
-
-<style>
-	.buttonContainer {
-		grid-template-columns: max-content max-content;
-	}
-</style>

@@ -1,6 +1,6 @@
 <script>
 	import { isFriday, isWeekend, getHours } from 'date-fns';
-	import { answers } from '../../stores';
+	import { answers } from '../../../../stores';
 	import SleepOnIt from '../sleep-on-it/+page.svelte';
 	import GiveTimelyFeedback from '../give-timely-feedback/+page.svelte';
 	import GoodMoment from '../good-moment/+page.svelte';
