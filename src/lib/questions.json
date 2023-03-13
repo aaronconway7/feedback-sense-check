@@ -1,64 +1,144 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "question": "What's the situation?",
         "options": [
-            { "id": "a", "text": "I'd like to give feedback", "goTo": "2"},
-            { "id": "b", "text": "I've recieved feedback", "goTo": "/received-feedback"}
+            {
+                "id": "a",
+                "text": "I'd like to give feedback",
+                "goTo": 2
+            },
+            {
+                "id": "b",
+                "text": "I've recieved feedback",
+                "goTo": "/received-feedback"
+            }
         ]
     },
     {
-        "id": "2",
+        "id": 2,
         "question": "What type of feedback?",
         "options": [
-            { "id": "a", "text": "Constructive", "goTo": "3"},
-            { "id": "b", "text": "Positive", "goTo": "/go-for-it"}
+            {
+                "id": "a",
+                "text": "Constructive",
+                "goTo": 3
+            },
+            {
+                "id": "b",
+                "text": "Positive",
+                "goTo": "/go-for-it"
+            }
         ]
     },
     {
-        "id": "3",
+        "id": 3,
         "question": "What's it about?",
         "options": [
-            { "id": "a", "text": "Something they said or did", "goTo": "4"},
-            { "id": "c", "text": "They do things in a different way to me", "goTo": "/pause"},
-            { "id": "d", "text": "I'm not quite sure", "goTo": "/pause"}
+            {
+                "id": "a",
+                "text": "Something they said or did",
+                "goTo": 4
+            },
+            {
+                "id": "c",
+                "text": "They do things in a different way to me",
+                "goTo": "/pause"
+            },
+            {
+                "id": "d",
+                "text": "I'm not quite sure",
+                "goTo": "/pause"
+            }
         ]
-    },    
+    },
     {
-        "id": "4",
+        "id": 4,
         "question": "What's your main intention?",
         "options": [
-            { "id": "a", "text": "Help them improve", "goTo": "5"},
-            { "id": "b", "text": "Help them do something differently", "goTo": "5"},
-            { "id": "d", "text": "Share how you do things", "goTo": "/pause"},
-            { "id": "e", "text": "Share how an incident made you feel", "goTo": "/pause"}
+            {
+                "id": "a",
+                "text": "Help them improve",
+                "goTo": 5
+            },
+            {
+                "id": "b",
+                "text": "Help them do something differently",
+                "goTo": 5
+            },
+            {
+                "id": "d",
+                "text": "Share how you do things",
+                "goTo": "/pause"
+            },
+            {
+                "id": "e",
+                "text": "Share how an incident made you feel",
+                "goTo": "/pause"
+            }
         ]
-    }, 
+    },
     {
-        "id": "5",
+        "id": 5,
         "question": "What's your relationship?",
         "options": [
-            { "id": "a", "text": "I'm their manager / more senior", "goTo": "6"},
-            { "id": "b", "text": "They're my manager / more senior", "goTo": "6"},
-            { "id": "c", "text": "We're peers", "goTo": "6"}
+            {
+                "id": "a",
+                "text": "I'm their manager / more senior",
+                "goTo": 6
+            },
+            {
+                "id": "b",
+                "text": "They're my manager / more senior",
+                "goTo": 6
+            },
+            {
+                "id": "c",
+                "text": "We're peers",
+                "goTo": 6
+            }
         ]
-    },   
+    },
     {
-        "id": "6",
+        "id": 6,
         "question": "How well do you know them?",
         "options": [
-            { "id": "a", "text": "We have a caring, trusting relationship", "goTo": "7"},
-            { "id": "b", "text": "I know them fairly well", "goTo": "7"},
-            { "id": "c", "text": "I don't know them well", "goTo": "7"}
+            {
+                "id": "a",
+                "text": "We have a caring, trusting relationship",
+                "goTo": 7
+            },
+            {
+                "id": "b",
+                "text": "I know them fairly well",
+                "goTo": 7
+            },
+            {
+                "id": "c",
+                "text": "I don't know them well",
+                "goTo": 7
+            }
         ]
-    },   
+    },
     {
-        "id": "7",
+        "id": 7,
         "question": "How are you feeling?",
         "options": [
-            { "id": "a", "text": "Calm and clear-headed", "goTo": "/time-check"},
-            { "id": "b", "text": "Not on top form", "goTo": "/time-check"},
-            { "id": "c", "text": "Defensive, stressed or tired", "goTo": "/time-check"}
+            {
+                "id": "a",
+                "text": "Calm and clear-headed",
+                "goTo": "/time-check"
+            },
+            {
+                "id": "b",
+                "text": "Not on top form",
+                "goTo": "/time-check"
+            },
+            {
+                "id": "c",
+                "text": "Defensive, stressed or tired",
+                "goTo": "/time-check"
+            }
         ]
     }
 ]
