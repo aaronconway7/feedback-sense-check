@@ -7,6 +7,7 @@
 	import { answers } from '../stores';
 	import { fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	let questions = [];
 	let reachedEnd = false;
@@ -55,7 +56,7 @@
 		const latestAnswer = $answers.at(-1);
 		const question = findQuestion(latestAnswer.questionId);
 		const option = question.options.find((o) => o.id === latestAnswer.optionId);
-		goto(option.goTo);
+		goto(`${base}${option.goTo}`);
 	}
 
 	function scrollIntoView(e) {

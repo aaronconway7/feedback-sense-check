@@ -1,10 +1,11 @@
 <script>
+	import { base } from '$app/paths';
 	import Arrow from '$lib/components/Arrow.svelte';
 	import BrandName from '$lib/components/BrandName.svelte';
 	import Illustration from '$lib/assets/img/illustration.svg';
 </script>
 
-<a class="flex gap-3 items-center absolute left-6 top-9" href="/">
+<a class="flex gap-3 items-center absolute left-6 top-9" href="{base}/">
 	<Arrow direction="left" />
 	<BrandName />
 </a>
