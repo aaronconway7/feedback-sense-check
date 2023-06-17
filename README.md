@@ -1,18 +1,9 @@
-# create-svelte
+![Feedback Sense Check](./src/lib/assets/img/poster.png)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+# Feedback Sense Check
+Feedback is a gift, but it can trigger emotions which cause us to make irrational choices.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Before giving or responding to feedback at work, use Feedback Sense Check to  help you manage your emotions.
 
 ## Developing
 
