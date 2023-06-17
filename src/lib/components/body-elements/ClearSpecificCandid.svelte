@@ -1,5 +1,4 @@
 <script>
-	import { base } from '$app/paths';
 	import GiveFeedback from '../body-elements/GiveFeedback.svelte';
 </script>
 
@@ -65,8 +64,8 @@
 <p>
 	Even well delivered feedback can cause an emotional response. You're not responsible for the
 	person's reaction. If they respond defensively, be curious and ask them what's going on for them.
-	For guidance you could <a href="{base}/">restart the Feedback Sense Check</a> and click 'Someone's
-	responded to my feedback'.
+	For guidance you could <a href="/">restart the Feedback Sense Check</a> and click 'Someone's responded
+	to my feedback'.
 </p>
 
 <h3>Keep the feedback loop going!</h3>

@@ -1,5 +1,4 @@
 <script>
-	import { base } from '$app/paths';
 	import BrandName from '$lib/components/BrandName.svelte';
 	import '../app.css';
 </script>
@@ -17,9 +16,9 @@
 		<slot />
 	</main>
 	<footer class="py-11 px-6 flex items-center gap-3 shrink-0 border-t border-t-grey text-xl">
-		<a href="{base}/"><BrandName /></a>
+		<a href="/"><BrandName /></a>
 		<div class="rounded-full bg-grey/50 w-1 h-1" />
-		<a href="{base}/about" class="transition hover:opacity-80">About</a>
+		<a href="/about" class="transition hover:opacity-80">About</a>
 	</footer>
 </div>
 
